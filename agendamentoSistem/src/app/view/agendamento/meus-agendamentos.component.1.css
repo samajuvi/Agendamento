@@ -1,0 +1,58 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+.niverSemana {
+  color: #005aa1;
+text-align: left;
+background: #f4f4f4;
+padding-top: .2em;
+padding-bottom: .2em;
+padding-left: 1em;
+font-size: 18px;
+}
+
+.highlighted_Aniversario {
+  background-color: #f4f4f4;
+  color: #005c9d;
+}
+
+table {
+  width: 99.9%;
+  text-align: center;
+  border-bottom: 1px solid #c8c8c8;
+  .header {
+    background: #c8c8c8;
+    font-weight: 600;
+    padding: 1em;
+    height: 40px;
+    font-size: 17px;
+  }
+  .normalLine {
+    height: 32px;
+font-weight: 600;
+    .borderleft {
+      border-left:1px solid #c8c8c8;
+
+    }
+   
+  }
+}
+
+ .borderright {
+      border-right:1px solid #c8c8c8;
+    }
+
+.titulo {
+  color: #005aa1;
+  text-align:center;
+  background: #f4f4f4;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+
+
+

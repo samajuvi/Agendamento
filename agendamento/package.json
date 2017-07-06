@@ -1,0 +1,22 @@
+{
+  "name": "agendamento",
+  "version": "1.0.0",
+  "description": "Sistema de agendamento",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shiatsu",
+    "massagens"
+  ],
+  "author": "saferreira",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "consign": "^0.1.2",
+    "express": "^4.14.0",
+    "express-validator": "^2.20.8",
+    "mysql": "^2.11.1"
+  }
+}

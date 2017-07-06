@@ -1,0 +1,108 @@
+<div class="dates widget ng-scope" ng-controller="calendarController">
+          <div class="inlinerBox">
+            <img src="img/icon2.png" height="27" width="25">
+      <div class="title">
+        Datas Especiais
+      </div>
+    </div>
+
+    <div class="month ng-binding">
+    <span ng-click="previous()">◀</span>maio<span ng-click="next()">▶</span>
+    </div>
+    <div class="calendar" ng-click="redirectTo('aniversario')">
+      <table>
+        <thead style="font-size: 0.85em">
+        <tr><th>
+          DOM
+        </th>
+        <th>
+          SEG
+        </th>
+        <th>
+          TER
+        </th>
+        <th>
+          QUA
+        </th>
+        <th>
+          QUI
+        </th>
+        <th>
+          SEX
+        </th>
+        <th>
+          SAB
+        </th></tr>
+
+        </thead>
+        <tbody>
+          <tr class="spacer">
+            <td colspan="7">
+
+            </td>
+
+          </tr>
+        <!-- ngRepeat: week in weeks --><tr ng-repeat="week in weeks" class="ng-scope">
+          <!-- ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope different-month">30
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">1
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">2
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">3
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">4
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">5
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">6
+          </td><!-- end ngRepeat: day in week.days -->
+        </tr><!-- end ngRepeat: week in weeks --><tr ng-repeat="week in weeks" class="ng-scope">
+          <!-- ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">7
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">8
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">9
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">10
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">11
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">12
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">13
+          </td><!-- end ngRepeat: day in week.days -->
+        </tr><!-- end ngRepeat: week in weeks --><tr ng-repeat="week in weeks" class="ng-scope">
+          <!-- ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">14
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope today">15
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">16
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">17
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">18
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">19
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">20
+          </td><!-- end ngRepeat: day in week.days -->
+        </tr><!-- end ngRepeat: week in weeks --><tr ng-repeat="week in weeks" class="ng-scope">
+          <!-- ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">21
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">22
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">23
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">24
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">25
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">26
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">27
+          </td><!-- end ngRepeat: day in week.days -->
+        </tr><!-- end ngRepeat: week in weeks --><tr ng-repeat="week in weeks" class="ng-scope">
+          <!-- ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">28
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope hasEvent">29
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">30
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope">31
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope different-month">1
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope different-month">2
+          </td><!-- end ngRepeat: day in week.days --><td popover-trigger="'mouseenter'" colspan="1" popover-title="TODOS OS EVENTOS" popover-append-to-body="true" uib-popover-template="dynamicPopover.templateUrl" ng-mouseover="select(day)" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected), hasEvent: day.hasEvent}" ng-repeat="day in week.days" class="ng-binding ng-scope different-month">3
+          </td><!-- end ngRepeat: day in week.days -->
+        </tr><!-- end ngRepeat: week in weeks -->
+
+        </tbody>
+      </table>
+        <div class="spacer">
+          <script type="text/ng-template" id="myPopoverTemplate.html">
+            <div class="item" style="    font-size: 10px;
+    text-align: left;
+" ng-click="redirectTo('aniversario')" ng-repeat="eventos in eventosHoje">
+              <i>{{eventos}}</i>
+              </div>
+             </script>
+        </div>
+        <div class="birthdays">
+          <!-- ngRepeat: eventos in eventosDiaDeHoje -->
+
+        </div>
+      </div>
+    </div>

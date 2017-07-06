@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+    <title>Atendimentos Brasilcap</title>
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+ 
+ 
+</head>
+<body>
+      <div class="aniversario">
+
+        <div class="titulo" style="    width: 99.9%;">
+          Agendamentos de Hoje
+        </div>
+
+      <table>
+        <tr class="borderright" style="border-right: 1px solid #c8c8c8; ">
+          <td>Hora</td>
+          <td>Nome</td>
+          <td>Ramal</td>
+          <td>Situação</td>
+          <td>Agend./Mês</td>
+          <td>Procedimento</td>
+        </tr>
+
+        <tr class="normalLine" *ngFor="let agendamento of resultadoAgendamento">
+          <td class="borderleft borderright" >{{agendamento.HORA}}</td>
+          <td class="borderleft borderright" >{{agendamento.NOME}}</td>
+          <td class="borderleft borderright" >{{agendamento.RAMAL}}</td>
+          <td class="borderleft borderright" >{{agendamento.STATUS_ATENDIMENTO}}</td>
+          <td class="borderleft borderright" >{{agendamento.QUANTIDADE}}</td>
+          <td class="borderleft borderright" >{{agendamento.PROCEDIMENTO}}</td>
+        </tr>
+
+      </table>
+
+
+      </div>
+
+</body>
+
+</html>

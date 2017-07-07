@@ -199,7 +199,7 @@ module.exports = function(app){
 
     
     //consulta de Agendamentos realizados 
-    app.get('/agendamentos', function(req, res){
+    app.get('/disponibilidade', function(req, res){
 
     // Request headers you wish to allow
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -347,7 +347,7 @@ module.exports = function(app){
 
 
         // Realizando a consulta
-        agendamentosDao.listaResumoHorario (consultaResumoHorario, function(erro, resultado){
+        agendamentosDao.listaResumoHorario (consultaResumo, function(erro, resultado){
             //trtando erros
             if(erro){
                 console.log('Ocorreu erro ao consultar os dados: ' + erro);

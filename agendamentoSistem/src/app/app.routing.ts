@@ -4,6 +4,7 @@ import { MeusAgendamentosComponent } from './view/agendamento/meus-agendamentos.
 import { LoginComponent } from './view/login/login.component';
 import { Routes, Router, RouterModule } from '@angular/router';
 import { DatasDisponiveisComponent} from './view/datas-disponiveis/datas-disponiveis.component';
+import { DetalharComponent} from './view/detalhar/detalhar.component';
 
 
 
@@ -30,7 +31,13 @@ export const APP_ROUTES: Routes = [
       title: 'Horarios Disponiveis'
     }
  },
-
+ {
+      path: 'detalhar',
+     component: DetalharComponent ,
+     data: {
+      title: 'Detalhe dos Horarios Disponiveis'
+    }
+ },
  {
     path: 'administracao', 
     component: AdministracaoComponent ,

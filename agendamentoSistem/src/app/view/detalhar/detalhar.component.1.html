@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 
+    <title>Horários Disponiveis</title>
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+ 
+ 
+</head>
+<body>
+      <div class="aniversario">
+
+        <div class="titulo" style="width: 99.9%;" >
+          Horários dispinveis para {{resultadoDetalhe[0].DIA}}
+        </div>
+
+      <table>
+        <tr class="borderright" style="border-right: 1px solid #c8c8c8; ">
+          <td>Hora</td>
+          <td>Procedimento</td>
+          <td>Profissional</td>
+        </tr>
+
+        <tr class="normalLine" *ngFor="let resultado of resultadoDetalhe">
+
+          <td class="borderleft borderright" >{{resultado.HORA}}</td>
+          <td class="borderleft borderright" >{{resultado.PROCEDIMENTO}} </td>
+          <td class="borderleft borderright" >{{resultado.PROFISSIONAL}} </td>
+          
+        </tr>
+
+      </table>
+
+
+      </div>
+
+</body>
+
+</html>

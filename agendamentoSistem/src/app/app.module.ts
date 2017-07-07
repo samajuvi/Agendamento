@@ -10,7 +10,9 @@ import { LoginComponent } from './view/login/login.component';
 import { DatasDisponiveisComponent } from './view/datas-disponiveis/datas-disponiveis.component';
 import { MeusAgendamentosComponent } from './view/agendamento/meus-agendamentos.component';
 import { AdministracaoComponent } from './view/administracao/administracao.component';
+import { DetalharComponent } from './view/detalhar/detalhar.component';
 import { AgendamentoController} from './controllers/AgendamentoController';
+import { DetalharController} from './controllers/DetalharController';
 import { DatasController} from './controllers/DatasController';
 import { routing } from './app.routing';
 
@@ -21,7 +23,8 @@ import { routing } from './app.routing';
     LoginComponent,
     DatasDisponiveisComponent,
     MeusAgendamentosComponent,
-    AdministracaoComponent
+    AdministracaoComponent,
+    DetalharComponent
     
   ],
   imports: [
@@ -32,7 +35,8 @@ import { routing } from './app.routing';
   ],
   providers: [
     AgendamentoController,
-    DatasController
+    DatasController,
+    DetalharController
   ],
   bootstrap: [AppComponent]
 })

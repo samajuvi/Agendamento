@@ -13,8 +13,6 @@ import { Http, Headers } from "@angular/http";
 export class MeusAgendamentosComponent implements OnInit {
   
   resultadoAgendamento : any = [];
-  resultadoAgendadoHoje : any = [];
-  resultadoHorarioDisponivel : any = [];
   resultadoListaEspera : any = [];
   resultadoRegra : any = [];
   resultadoResumo : any = [];
@@ -33,23 +31,7 @@ export class MeusAgendamentosComponent implements OnInit {
     console.log("depois da função, resposta: "+ JSON.stringify(this.resultadoAgendamento));
   });
     }
-  
-
-    getAgendadoHoje(){
-    console.log("antes da função dados");
-    this.controller.getAgendadoHoje().subscribe(res => {
-    this.resultadoAgendadoHoje = res[0];
-    console.log("depois da função, resposta: "+ JSON.stringify(this.resultadoAgendadoHoje));
-  });
-    }
-
-    getHorarioDisponivel(){
-    console.log("antes da função dados");
-    this.controller.getHorarioDisponivel().subscribe(res => {
-    this.resultadoHorarioDisponivel = res[0];
-    console.log("depois da função, resposta: "+ JSON.stringify(this.resultadoHorarioDisponivel));
-  });
-    }
+ 
     getEspera(){
     console.log("antes da função dados");
     this.controller.getEspera().subscribe(res => {
@@ -58,14 +40,6 @@ export class MeusAgendamentosComponent implements OnInit {
   });
     }
    
-    getRegra(){
-    console.log("antes da função dados");
-    this.controller.getEspera().subscribe(res => {
-    this.resultadoRegra = res[0];
-    console.log("depois da função, resposta: "+ JSON.stringify(this.resultadoRegra));
-  });
-    }
-
     getResumo(){
     console.log("antes da função dados");
     this.controller.getResumo().subscribe(res => {
@@ -74,10 +48,6 @@ export class MeusAgendamentosComponent implements OnInit {
   });
    
   }
-
-    exibeAbertos() {
-       window.location.href = "/meus-agendamentos.component.1.html";
-    }
 
 
 }

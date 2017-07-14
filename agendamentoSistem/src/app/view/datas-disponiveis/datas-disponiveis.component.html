@@ -1,6 +1,10 @@
 <html>
+    <head>
+     
 
+    </head>
 <body>
+
 
   <div class="letreiro-container">
     <div class="container container-lg">
@@ -9,19 +13,16 @@
       </div>
     </div>
   </div>
-
   <div class="layout-container" *ngIf="!resultadoResumoDisponiveis">
     <p class="dashboard-card-body info-card-body ng-binding">No momento, Não há mais horarios disponiveis para este mês</p>
      <p class="dashboard-card-body info-card-body ng-binding">Verifique mais tarde, pode haver desistência</p>
   </div>
-
   <div style="display: inline-block;" *ngFor="let resumo_disponivel of resultadoResumoDisponiveis">
-
     <div class="layout-container" *ngIf="resumo_disponivel">
       <div class="container container-lg">
         <div class="row">
           <div class="col-sm-2 col-xs-12">
-            <div class="card btn-raised" routerLink="/agendamento/{{resumo_disponivel.DATA}}">
+            <div class="card btn-raised" routerLink="/detalhar">
               <div class="card-heading dashboard-card info-card">
                 <div title="" class="card-title">{{resumo_disponivel.DATA}}</div>
               </div>
@@ -30,12 +31,11 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
   </div>
+
 </body>
 
 </html>

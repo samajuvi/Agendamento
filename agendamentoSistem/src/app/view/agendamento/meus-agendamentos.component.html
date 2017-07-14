@@ -1,70 +1,87 @@
 <html>
+
     <body>
         
-        <div class="letreiro-container">
+        <div class="titulo">
             <div class="container container-lg">
-                <div class="row">
-                    <div class="col-md-9  mensagem-principal">Agendamentos</div>
-                    <div class="col-md-3  principal-data">AgendA</div>
-                </div>
+                    <div class="col-md-9  mensagem-principal">Meus Agendamentos</div>
             </div>
         </div>
 
         <div class="layout-container">
             <div class="container container-lg">
                 <div class="row">
-                    <div class="col-sm-2 col-xs-12">
-                        <div class="card btn-raised"  routerLink="/agendar" >
-                            <div class="card-heading dashboard-card info-card">
-                                <div title="" class="card-title">PROXIMO <BR>AGENDAMENTO</div>
-                            </div>
-                            <div class="card-body pt0">
-                                <tr *ngFor="let resumo of resultadoResumo">
-                                <p class="dashboard-card-body info-card-body ng-binding">{{resumo.HOJE}}</p>
-                                <p class="dashboard-card-body ng-binding">10:20</p>
-                                </tr>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-2 col-xs-12">
-                        <div class="card btn-raised"  ng-click="exibeAbertos()">
-                            <div class="card-heading dashboard-card info-card sistemas">
-                                <div title="" class="card-title">HORARIOS <BR>AGENDADOS</div>
-                            </div>
-                            <div class="card-body pt0">
-                                <tr *ngFor="let resumo of resultadoResumo">
-                                <p class="dashboard-card-body info-card-body ng-binding">{{resumo.QTD_AGENDAMENTOS}}</p>
-                                </tr>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2 col-xs-12">
-                        <div class="card btn-raised"  ng-click="exibeAbertos()">
-                            <div class="card-heading dashboard-card info-card sistemas">
-                                <div title="" class="card-title">FILA DE<BR>ESPERA</div>
-                            </div>
-                            <div class="card-body pt0">
-                                <tr *ngFor="let resumo of resultadoResumo">
-                                <p class="dashboard-card-body info-card-body ng-binding">{{resumo.QTD_ESPERA}}</p>
-                                </tr>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="col-sm-2 col-xs-12">
                         <div class="card btn-raised">
-                            <div class="card-heading dashboard-card info-card sistemas">
-                                <div title="" class="card-title">QUANT.<BR>DISP. MÊS</div>
-                            </div>
-                            <div class="card-body pt0">
-                                <tr *ngFor="let resumo of resultadoResumo">
-                                <p class="dashboard-card-body info-card-body ng-binding">{{resumo.QTD_AGENDAMENTO_RESTANTE}}</p>
-                                </tr>
+                            <div class="card-heading dashboard-card info-agendamento">
+                                <div *ngIf="resultadoResumo[0].PROXIMO; else semAgendamento">
+  
+                                    <div title="" class="card-title">PROXIMO <BR>AGENDAMENTO:</div>
+                                    <p class="dashboard-card-body">{{resultadoResumo[0].PROXIMO}}</p>
+                                    <p class="dashboard-card-body">{{resultadoResumo[0].HORA}}</p>
+                                </div>
+
+                                <ng-template #semAgendamento>
+                                    <div title="" class="card-title">NÃO HÁ NOVOS<BR>AGENDAMENTOS</div>
+                                </ng-template>
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="col-sm-2 col-xs-12">
+                        <div *ngIf="resultadoResumo[0].QTD_AGENDAMENTOS">
+                            <div class="card btn-raised"  routerLink="/detalhar-meus-agendamentos" >
+                                <div class="card-heading dashboard-card info-card creditos">
+                                    <div title="" class="card-title">HORARIOS <BR>AGENDADOS</div>
+                                </div>
+                                <div class="card-body pt0">
+                                    <p class="dashboard-card-body">{{resultadoResumo[0].QTD_AGENDAMENTOS}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                  <div class="col-sm-2 col-xs-12">
+                      <div *ngIf="resultadoResumo[0].QTD_ESPERA">
+                            <div class="card btn-raised"  routerLink="/detalhar-fila-espela" >
+                                <div class="card-heading dashboard-card info-card creditos">
+                                    <div title="" class="card-title">FILA DE<BR>ESPERA</div>
+                                </div>
+                                <div class="card-body pt0">
+                                    <p class="dashboard-card-body">{{resultadoResumo[0].QTD_ESPERA}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-2 col-xs-12">
+                        <div *ngIf="resultadoResumo[0].QTD_HORARIOS_DISPONIVEIS; else agendamentoEsgotado">
+                            <div class="card btn-raised" routerLink="/detalhar-regras">
+                                <div class="card-heading dashboard-card info-card creditos">
+                                    <div title="" class="card-title">QUANT.<BR>DISP. MÊS</div>
+                                </div>
+                                <div class="card-body pt0">
+                                    <p class="dashboard-card-body">{{resultadoResumo[0].QTD_HORARIOS_DISPONIVEIS}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <ng-template #agendamentoEsgotado>
+                            <div class="card btn-raised" routerLink="/detalhar-regras">
+                                <div class="card-heading dashboard-card info-card creditos-fail">
+                                    <div title="" class="card-title">TODOS OS AGENDAMENTOS<BR>FORAM UTILIZADOS</div>
+                                </div>
+                                <div class="card-body pt0">
+                                    <p class="dashboard-card-body">0</p>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+
 
                 </div>
             </div>

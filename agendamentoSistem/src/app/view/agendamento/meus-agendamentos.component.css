@@ -1,5 +1,7 @@
-body {
-    font-family: 'Roboto', sans-serif;
+
+.titulo {
+    position: relative;
+    width: 90%;
 }
 
 .card {
@@ -19,24 +21,6 @@ body {
     margin-bottom: 20px;
 }
 
-.card-block-head {
-    border: 1px solid rgba(0,0,0,.125);
-    color: #FFF;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-
-.incidente{
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.35;
-    text-align: center;
-    color: #757575;
-    color: var(--warm-grey-two);
-    padding-top: 10px;
-}
-
 .dashboard-card{
     color: #fff !important;
     font-family: Roboto;
@@ -49,12 +33,11 @@ body {
     text-transform: uppercase;
 }
 
-.dashboard-card-bt-info{
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 300;
-    letter-spacing: 0.1px;
+.card-block-head {
+    border: 1px solid rgba(0,0,0,.125);
+    color: #FFF;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
 }
 
 .dashboard-card-body {
@@ -66,136 +49,17 @@ body {
     color: var(--mid-green);
 }
 
-.sucess-card {
-    background-color: #43a047;
-}
-
-.btn-info-sucess-card {
-    background-color: #2e7d32;
-    border-color: #2e7d32;
-}
-
-.sucess-card-body {
-    color: #43a047;
-}
-
-.abertos24 {
-    background-color: #f9a825;
-}
-
-.btn-info-abertos24 {
-    background-color: #f57f17;
-    border-color: #f57f17;
-}
-
-.abertos24-body {
-    color: #f9a825;
-}
-
-.warning-card {
-    background-color: #f9a825;
-}
-
-.btn-info-warning-card {
-    background-color: #f57f17;
-    border-color: #f57f17;
-}
-
-.warning-card-body {
-    color: #f9a825;
-}
-
-.normalized-card {
-    background-color: #00838f;
-}
-
-.btn-info-normalized-card {
-    background-color: #006064;
-    border-color: #006064;
-}
-
-.normalized-card-body {
-    color: #00838f;
-}
-
-.alerta-card {
-    background-color: #e74c3c;
-}
-
-.btn-info-alerta {
-    background-color: #c0392b;
-    border-color: #c0392b;
-}
-
-.alerta-body {
-    color: #e74c3c;
-}
-
-.abertos72 {
-    background-color: #512da8;
-}
-
-.btn-info-abertos72 {
-    background-color: #311b92;
-    border-color: #311b92;
-}
-
-.abertos72-body {
-    color: #512da8;
-}
-
-.processos-producao {
-    background-color: #0277bd;
-}
-
-.btn-info-processos-producao {
-    background-color: #01579b;
-    border-color: #01579b;
-}
-
-.processos-producao-body {
-    color: #0277bd;
-}
-
-.fechados-hoje-body {
-    color: #1565c0;
-}
-
-.info-card {
-    background-color: #1565c0;
-}
-
-.btn-info-info-card {
-    background-color: #0d47a1;
-    border-color: #0d47a1;
-}
-
-
-.sistemas {
-    background-color: #9e9e9e;
-}
-
-
-.sistemas-body {
-    color: #9e9e9e;
-}
-
-.atendimento {
-    background: #F1BF26;
-}
-
-
-.card-text.status {
-    font-size: 46px;
+.creditos {
+    background-color: #4169E1;
     text-align: center;
-    color: black;
-    padding: 10px;
-    font-weight: bold;
 }
-
-.navbar {
-    background: #000;
-    margin-bottom: 40px;
+.creditos-fail {
+    background-color: #DC143C;
+    text-align: center;
+}
+.info-agendamento {
+    background-color: #228B22;
+    text-align: center;
 }
 
 .mensagem-principal {
@@ -207,269 +71,21 @@ body {
     color: #757575;
 }
 
-.principal-data {
-    font-family: Roboto;
-    font-size: 30px;
-    font-weight: 100;
-    line-height: 1.03;
-    letter-spacing: 12px;
-    color: #757575;
-    padding-left:10px;
-}
-
-.card-icon.focus, .card-icon:focus, .card-icon:hover {
-    color: #fffff;
-    text-decoration: none;
-}
-
-.letreiro-container {
-    position: relative;
-    width: 100%;
-}
-
-.logo {
-    padding-top: 10px;
-    padding-left: 20px;
-}
-
-.navbar-dashboard {
-    background: #3b3d40;
-    height: 50px;
-}
-
 .container {
     width: 100%;
 }
 
-.btn-default-menu {
-    color: #6C7177;
-    background-color: #fff;
-    border-color: #ECEFF1;
-    margin-top: 10px;
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    background-image: url("../img/menu-icon-8.png");
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-size: 30px;
-    width: 32px;
-    height: 32px;
-}
-
-.btn-default-menu:hover {
-    color: #fff;
-    border-color: #6C7177;
-}
-
-.lista-os {
-    padding: 60px 5% 5% 5%;
-}
-
-.footer {
-    width: 100%;
-    position: relative;
-    padding: 15px;
-}
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-   
 
 
 
 
 
 
-   /*!
- * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
- body {
-    overflow-x: hidden;
- }
-
-/* Toggle Styles */
-
-#wrapper {
-    padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-    padding-left: 130px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: absolute;
-    width: 0;
-    height: 100%;
-    margin-left: -130px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    margin-top: 50px;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 130px;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 130px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 7px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 0;
-    }
-
-    #wrapper.toggled {
-        padding-left: 130px;
-    }
-
-    #sidebar-wrapper {
-        width: 0;
-        margin-top: 50px;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        width: 130px;
-    }
-
-    #page-content-wrapper {
-        padding: 20px;
-        position: relative;
-    }
-
-    #wrapper.toggled #page-content-wrapper {
-        position: relative;
-        margin-right: 0;
-    }
-}
 
 
 
 
 
-@charset "UTF-8";
-/*!
- *
- * Centric - Bootstrap Admin Template
- *
- * Version: 1.5
- * Author: @themicon_co
- * Website: http://themicon.co
- * License: https://wrapbootstrap.com/help/licenses
- *
- */
 @import url("http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700");
 
 /**
@@ -15922,22 +15538,5 @@ margin: 0;
 font-size: 
 17px;
 }
-
-}
-
-.menos24, .mais24{
-
-  border-left: 10px solid #006064 !important;
-
-}
-
-.mais48, .mais72{
-
-  border-left: 10px solid #f9a825 !important;
-
-}
-.alerta{
-
-  border-left: 10px solid #c0392b !important;
 
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html >
-  
 <head>
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
 
@@ -11,18 +10,17 @@
     <div class="titulo" style="width: 99.9%;" >
       Horários dispinveis para {{resultadoDetalhe[0].DIA}}
     </div>
+
       <table>
         <tr class="borderright" style="border-right: 1px solid #c8c8c8; ">
-          <td>Hora / Data / Procedimento / Profissional </td>
+            <td>Hora / Procedimento / Profissional</td>
         </tr>
 
-        <tr *ngFor="let resultado of resultadoDetalhe">
+        <tr class="normalLine " *ngFor="let resultado of resultadoDetalhe">
           <div class="detalhar">
-            <button _ngcontent-c4="" class="info-agendar">{{resultado.HORA}} - {{resultado.PROCEDIMENTO}}  -  {{resultado.PROFISSIONAL}}</button>
-            <button _ngcontent-c4="" class="agendar" routerLink="/agendar">Agendar</button>
+            <button _ngcontent-c4="" class="agendar" routerLink="/agendar">{{resultado.HORA}} - {{resultado.PROCEDIMENTO}}  -  {{resultado.PROFISSIONAL}}</button>
           </div>
         </tr>
-        <button _ngcontent-c4="" class="espera" routerLink="/espera">Incluir Na Fila de Espera</button>
       </table>
       </div>
 </body>

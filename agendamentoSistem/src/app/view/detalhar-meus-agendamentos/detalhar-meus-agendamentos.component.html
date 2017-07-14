@@ -1,0 +1,31 @@
+
+
+
+<!DOCTYPE html>
+<html >
+<head>
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+</head>
+<body>
+      <div>
+
+    <div class="titulo" style="width: 99.9%;" >
+      Administrando Meus Agendamentos
+    </div>
+
+      <table>
+        <tr class="borderright" style="border-right: 1px solid #c8c8c8; ">
+            <td>Hora / Data / Procedimento / Profissional</td>
+        </tr>
+
+        <tr  *ngFor="let resultado of resultadoDetalhe">
+          <div class="detalhar">
+             <button _ngcontent-c4="" class="agendar">{{resultado.HORA}} - {{resultado.DIA}} - {{resultado.PROCEDIMENTO}} - {{resultado.PROFISSIONAL}}</button>
+             <button _ngcontent-c4="" class="cancelar" routerLink="/agendar">Cancelar</button>
+          </div>
+        </tr>
+      </table>
+      </div>
+</body>
+</html>

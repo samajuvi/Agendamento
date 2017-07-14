@@ -5,12 +5,12 @@ import { Http, Headers } from "@angular/http";
 
 
 @Component({
-  selector: 'app-detalhar',
-  templateUrl: './detalhar.component.html',
-  styleUrls: ['./detalhar.component.css'],
+  selector: 'app-detalhar-regra',
+  templateUrl: './detalhar-regras.component.html',
+  styleUrls: ['./detalhar-regras.component.css'],
   providers:[DetalharController]
 })
-export class DetalharComponent implements OnInit {
+export class DetalharRegrasComponent implements OnInit {
 
 
  resultadoDetalhe : any = [];
@@ -34,6 +34,6 @@ export class DetalharComponent implements OnInit {
 
 @Component({
   selector: 'slide-toggle-overview-example',
-  templateUrl: 'detalhar.component.html',
+  templateUrl: 'detalhar-regras.component.html',
 })
 export class SlideToggleOverviewExample {}

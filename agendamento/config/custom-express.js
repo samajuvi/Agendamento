@@ -1,22 +1,21 @@
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
-
+var expressValidator = require('express-validator');
 
 module.exports = function(){
+  var app = express();
 
-var app = express();
+  app.use(bodyParser.urlencoded({extended: true}));
+  app.use(bodyParser.json());
 
-//definindo a interpretação de parse do json
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+  app.use(expressValidator());
 
-// incluindo todo o conteudo da pasta controllers e depois a persistencia para ser utilizado na variavel app
-consign()
-    .include('controllers')
-    .then('persistencia')
-    .into(app);
+  consign()
+   .include('controllers')
+   .then('persistencia')
+   //.then('servicos')
+   .into(app);
 
-return app;
-
+  return app;
 }

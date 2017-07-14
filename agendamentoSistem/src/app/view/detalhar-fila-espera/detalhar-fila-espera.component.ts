@@ -6,11 +6,11 @@ import { Http, Headers } from "@angular/http";
 
 @Component({
   selector: 'app-detalhar',
-  templateUrl: './detalhar.component.html',
-  styleUrls: ['./detalhar.component.css'],
+  templateUrl: './detalhar-fila-espera.component.html',
+  styleUrls: ['./detalhar-fila-espera.component.css'],
   providers:[DetalharController]
 })
-export class DetalharComponent implements OnInit {
+export class DetalharFilaEspelaController implements OnInit {
 
 
  resultadoDetalhe : any = [];

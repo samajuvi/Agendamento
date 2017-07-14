@@ -1,6 +1,84 @@
-module.exports = function(app){
 
+
+module.exports = function(app){   
+
+   
+ var logger = require('./logger.js');
+   //var md5 = require('md5');
+  
+  logger.debugLevel = 'warn';
+
+
+  var usuario = function(req,res,next){
+          var id =  req.params.id; 
+          logger.log('info', 'consultado usuario id : ' + id); 
+          var UserDAO = new app.dao.UserDAO();
+          
+        UserDAO.findById(id,function(resultados,erros){ 
+
+             if(erros){
+               return next(erros);
+              }   
+              res.json(resultados)
+          });
+  };
+
+//-------------------------------------------------------------------------------------------------------------
+ //var app = require('./agendamento')
 // mapeando todas as rotas gets que serão utilizadas na aplicação - com logim Administrador ou Atendente
+
+  //consulta de Procedimentos a disposição
+
+   // app.get('/usuario/:id',usuario);
+
+
+    app.post("/usuario",function(req,res) {
+    
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+        //trazendo as informações do corpo da chamada para a Variavel
+        var consultaUsuarios = req.body;
+       req.assert('username',' username é obrigatório...').notEmpty();
+        req.assert('senha','senha é obrigatório').notEmpty(); 
+    
+
+        var erros = req.validationErrors(); 
+      
+        if(erros){   
+           res.format({
+            json: function(){
+                res.status(400).json(erros);
+            }
+        });
+            return;
+        } 
+     
+     usuario.senha = md5(usuario.senha);
+   
+      var UserDAO = new app.dao.UserDAO();
+        UserDAO.save(usuario,function(erros,resultado){
+           res.format({
+            json: function(){
+                res.status(200).json('sucesso');
+            } });
+             
+              
+        });
+ 
+   
+  });
+  
+  
+  
+
+//--------------------------------------------------------------------------------
 
    //consulta de Procedimentos a disposição
     app.get('/procedimentos', function(req, res){
@@ -271,18 +349,15 @@ module.exports = function(app){
                     console.log('Consulta realizada com sucesso');
                     res.json(resultado);
             }
-
         });
-
     });
-
 
 
 //--------------------------------------------------------------------------------
 
  
     //consulta de resumo 
-    app.get('/resumo', function(req, res){
+    app.get('/resumo/:idAcao/:idUser', function(req, res){
 
     // Request headers you wish to allow
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
@@ -293,11 +368,12 @@ module.exports = function(app){
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-        //trazendo as informações do corpo da chamada para a Variavel
-        var consultaResumo = req.body;
+        // trazendo as informações do corpo da chamada para a Variavel
+        var paramIdAcao = req.params.idAcao;
+        var paramIdUser= req.params.idUser;
 
-          // Consultando Logs de andamento e rastreamento
-        console.log('RECEBENDO REQUISIÇÃO - CONSULTA DE AGENDAMETOS');
+        // Consultando Logs de andamento e rastreamento
+        console.log('RECEBENDO REQUISIÇÃO - CONSULTA DE AGENDAMETOS: ');
         console.log('REALIZANDO CONEXÃO');
         
         //carregando as informações de conexão
@@ -306,22 +382,22 @@ module.exports = function(app){
 
 
         // Realizando a consulta
-        agendamentosDao.listaResumo (consultaResumo, function(erro, resultado){
+        agendamentosDao.listaResumo (paramIdAcao,paramIdUser, function(erro, resultado){
             //trtando erros
             if(erro){
                 console.log('Ocorreu erro ao consultar os dados: ' + erro);
             }else{
                     console.log('Consulta realizada com sucesso');
-                    console.log('Resultado da Query: '+ resultado);
+                    console.log('Resultado da Query: '+ JSON.stringify(resultado));
                     res.json(resultado);
             }
 
         });
 
     });
+
 //-------------------------------------------------------------------------------------
 
-    
     //consulta de resumo 
     app.get('/resumohorario', function(req, res){
 
@@ -345,9 +421,8 @@ module.exports = function(app){
         var connection = app.persistencia.connectionFactory();
         var agendamentosDao = new app.persistencia.AgendamentoDao(connection);
 
-
         // Realizando a consulta
-        agendamentosDao.listaResumoHorario (consultaResumo, function(erro, resultado){
+        agendamentosDao.listaResumoHorario (consultaResumoHorario, function(erro, resultado){
             //trtando erros
             if(erro){
                 console.log('Ocorreu erro ao consultar os dados: ' + erro);
@@ -360,8 +435,6 @@ module.exports = function(app){
         });
 
     });
-
-
 
 
 

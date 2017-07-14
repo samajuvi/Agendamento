@@ -16,17 +16,15 @@ AgendamentoDao.prototype.lista = function (agendamento, callback){
     console.log('Query Executada: '+ query);
 }
 
-AgendamentoDao.prototype.listaResumo = function (agendamento, callback){
-     
-    var query = 'CALL agendamento.RESUMO_DIARIO_SPS;';
-    this._connection.query(query, callback);
-    console.log('Query Executada: '+ query);
+AgendamentoDao.prototype.listaResumo = function (idAcao, idUser, callback){
+     console.log('parametros: '+ idAcao + idUser);
+    this._connection.query("CALL agendamento.RESUMO_DIARIO_SPS("+idAcao+","+idUser+");", callback);
 }
 
 
 AgendamentoDao.prototype.listaResumoHorario = function (agendamento, callback){
      
-    var query = 'CALL agendamento.RESUMO_DISPONIVEL_SPS;';
+    var query = 'CALL agendamento.RESUMO_DISPONIVEL_SPS();';
     this._connection.query(query, callback);
     console.log('Query Executada: '+ query);
 }

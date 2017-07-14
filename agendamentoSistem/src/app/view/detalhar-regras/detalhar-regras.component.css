@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 
 table {
@@ -34,32 +35,15 @@ button:disabled {
   cursor: auto;
 }
 
-button.info-agendar[_ngcontent-c4] {
+button.agendar[_ngcontent-c4] {
     float: center;
     margin-top: 2px;
     margin-right: .8em;
     background-color: gray !important;
     color: white;
 }
-
-button.agendar[_ngcontent-c4] {
-    float: center;
-    margin-top: 2px;
-    margin-right: .8em;
-    background-color: #008000 !important;
-    color: white;
-}
-button.espera[_ngcontent-c4] {
-    float: center;
-    margin-top: 2px;
-    margin-right: .8em;
-    background-color: #337ab7!important;
-    border-color: #2e6da4!important;
-    color: white;
-    padding: 15px;
-}
 .detalhar
 {
-  padding: 5px;
+  padding: 3px;
   
   }

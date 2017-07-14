@@ -1,0 +1,66 @@
+.modalPessoalHeader {
+  background: #fff301;
+  text-align: center;
+  color: #3761a6;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "Open Sans";
+    padding:10px;
+    margin-bottom: 2em;
+}
+
+
+.boxlabelselect {
+  margin-bottom:20px;
+  display: flex;
+    align-items: baseline;
+  font-weight: bold;
+      justify-content: center;
+}
+.boxlabelselect > .labelnegrito {
+  margin-right: 12px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.boxlabelselect > .boxSelect {
+  width: 464px;
+}
+
+.negrito {
+  font-weight: bold;
+}
+
+.sublinhado {
+  text-decoration: underline;
+}
+
+.boxgroupInline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputPadrao {
+
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}
+
+.textareaPadrao {
+  -webkit-appearance: none;
+    border-radius: 0;
+    background: #fff;
+    padding: .2em .4em;
+    font-weight: 500;
+    border-color: black;
+    border-width: 1px;
+    z-index: 999;
+    border-style: solid;
+
+}
+
+.labelNegrito {
+
+}

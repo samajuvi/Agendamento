@@ -17,6 +17,7 @@ export class MeusAgendamentosComponent implements OnInit {
   resultadoRegra : any = [];
   resultadoResumo : any = [];
   
+  
 
   constructor(private http: Http, private controller: AgendamentoController) { }
 
@@ -42,7 +43,7 @@ export class MeusAgendamentosComponent implements OnInit {
    
     getResumo(){
     console.log("antes da função dados");
-    this.controller.getResumo().subscribe(res => {
+    this.controller.getResumo('/1/3').subscribe(res => {
     this.resultadoResumo = res[0];
     console.log("depois da função, resposta: "+ JSON.stringify(this.resultadoResumo));
   });

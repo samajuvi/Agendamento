@@ -23,8 +23,8 @@ export class AgendamentoController {
     return this._http.get(baseUrl).map(res => res.json());
   }
 
-  getResumo() {
-    let baseUrl = 'http://localhost:3000/resumo';
+  getResumo(dados) {
+    let baseUrl = 'http://localhost:3000/resumo'+ dados;
     console.log("URL ", baseUrl);
     return this._http.get(baseUrl).map(res => res.json());
   }

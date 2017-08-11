@@ -1,0 +1,105 @@
+<script src="./path/to/dropzone.js"></script>
+<div class="page-title">
+  <h3 class="title">
+    Processo de Óbito
+  </h3>
+</div>
+
+<script src="bower_components/ng-cpf-cnpj-validate/validate-cpf-directive.js"></script> 
+<script src="bower_components/ng-cpf-cnpj-validate/validate-cnpj-directive.js"></script> 
+
+<div class="row">
+  <!-- Input States -->
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Inclusão de Documentos</h3>
+      </div>
+      <div class="panel-body">
+
+        <div class="col-sm-offset-2 col-sm-9">
+          <form class="form-horizontal" role="form">
+
+              <!--div class="form-group">
+                <label class="col-sm-2 control-label">Nº Protocolo:</label>
+                  <div class="col-md-10">
+                    <input type="protocolo" id="protocolo" name="protocolo" class="form-control" placeholder="Protocolo">
+                  </div>
+              </div-->
+
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">CPF:</label>
+                  <div class="col-md-10">
+                    <input type="cpf" [(ngModel)]="cpf" id="cpf" name="cpf" class="form-control" ng-cpf ui-mask="999.999.999-99" placeholder="CPF">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Telefone:</label>
+                  <div class="col-md-10">
+                    <input type="cpf" [(ngModel)]="telefone" id="telefone" name="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Responsável:</label>
+                  <div class="col-md-10">
+                    <input type="cpf" [(ngModel)]="responsavel" id="responsavel" name="responsavel" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Falecido</label>
+                  <div class="col-md-10">
+                    <input type="text" [(ngModel)]="falecido" id="falecido" name="falecido" class="form-control" readonly>
+                  </div>
+                </div>
+
+            <!--div class="form-group">
+                <label class="col-sm-2 control-label">Nome:</label>
+                <div class="col-md-10">
+                  <input type="nome" id="nome" name="nome" class="form-control" placeholder="Nome">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Agência:</label>
+                <div class="col-md-10">
+                  <input type="agencia" id="agencia" name="agencia" class="form-control" placeholder="Agência">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Descrição:</label>
+                <div class="col-md-10">
+                  <textarea id="descricao" name="descricao" class="form-control" rows="5" placeholder="Descritivo"></textarea>
+                </div>
+            </div-->
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Incluir Documento:</label>
+                <div class="col-md-10">
+                    <div class="fallback">
+                      <input (change)="getImagem($event, imagem)" type="file" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-md-10">
+                  <button  [disabled]="isLoadingImage"  (click)="enviarArquivo()" type="submit" role="row"  href="#" class="btn btn-success">Salvar</button>
+                  <!--{{isLoadingImage}}-->
+                </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- panel-body -->
+    </div>
+    <!-- panel -->
+  </div>
+  <!-- col -->
+</div>
+
+

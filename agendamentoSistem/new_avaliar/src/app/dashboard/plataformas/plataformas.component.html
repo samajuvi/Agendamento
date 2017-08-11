@@ -1,0 +1,42 @@
+<div class="wraper container-fluid">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Plataformas
+        </h3>
+        <div class="col-sm-offset-11">
+            <a [routerLink]="['/dashboard/plataforma']" class="btn btn-primary">
+              Novo <i class="fa fa-plus"></i>
+            </a>
+          </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Plataforma</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let plataforma of plataformas; let i = index">
+                  <td>{{ i }}</td>
+                  <td>{{ plataforma.nome }}</td>
+                  <td>
+                      <a (click)="selecionarPlataforma(plataforma)">
+                        <span class="fa fa-pencil"></span>
+                      </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

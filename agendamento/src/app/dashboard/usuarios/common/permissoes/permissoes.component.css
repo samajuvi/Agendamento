@@ -1,0 +1,26 @@
+h3 {
+    /*order-bottom: 1px solid #cecece;*/
+    margin-left: -15px;
+}
+
+
+
+.linha {
+    border-top: 2px solid #cecece;
+    padding-bottom: 20px;
+}
+
+.linha:first-child {
+    border-top: none;
+}
+
+span {
+    padding:2px 5px;
+    /*background-color: #cecece;*/
+    color:#000;
+    display: inline-block;
+}
+
+span.active {
+    background-color:green;
+}

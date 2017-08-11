@@ -1,0 +1,82 @@
+.wrapper-page {
+  width: 380px;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+h4 {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.panel {
+    background: transparent;
+    border: transparent;
+}
+
+.form-control {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25;
+    text-align: left;
+    color: #fefefe;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px #ffffff solid; 
+}
+
+.btn {
+    width: 100%;
+    height: 49px;
+    border-radius: 3px;
+    background-color:transparent;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+
+}
+
+.input-group-addon {
+    background-color: transparent;
+    border: transparent;
+}
+
+input:focus, input:blur { 
+    background-color: transparent;
+}
+
+.acesse {
+  margin-top: 80px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.form-group.button {
+    margin-top: 50px;
+}
+
+.forgot a {
+    color:#fff;
+    vertical-align: middle;
+    text-transform: 
+   
+}
+
+.forgot {
+    margin-top: 10px;
+}
+
+.input-group-addon {
+    padding: 6px 12px 6px 0;
+    color: #FFF;
+}

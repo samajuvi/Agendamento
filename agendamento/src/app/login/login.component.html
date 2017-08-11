@@ -1,0 +1,63 @@
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<link href="/assets/css/login.css" rel="stylesheet">
+
+<div class="wrapper-page animated fadeInDown">
+  <alert></alert>
+
+  <h4>Gestão de Acesso</h4>
+
+  <!--<div class="acesse">Acesse sua conta</div>-->
+  <div class="panel panel-color panel-primary">
+
+    <form class="form-horizontal m-t-40">
+
+      <div class="form-group ">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input [(ngModel)]="usuario.email" name="email" type="text" class="form-control" placeholder="Email">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group ">
+        <div class="col-xs-12">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input [(ngModel)]="usuario.senha" name="senha" type="password" class="form-control" placeholder="Senha">
+          </div>
+        </div>
+      </div>
+      <!--
+      <div class="form-group ">
+        <div class="col-xs-12">
+          <label class="cr-styled">
+              <input type="checkbox" checked>
+              <i class="fa"></i> 
+              Remember me
+          </label>
+        </div>
+      </div>
+      -->
+
+      <div class="form-group">
+         <!--<div class="col-xs-6 forgot">
+          <a href="#">Esqueceu sua senha?</a>
+        </div>-->
+        <div class="col-xs-12 text-center">
+          <button [disabled]="loading" class="btn btn-primary" (click)="login(usuario)"  [disabled]="!(usuario.email && usuario.senha)" type="submit">LOGIN</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="
+          />
+        </div>
+      </div>
+      <!--
+      <div class="form-group m-t-30">
+        <div class="col-sm-7">
+          <a href="#"><i class="fa fa-lock m-r-5"></i>Esquece sua senha ?</a>
+        </div>
+      </div>
+      -->
+    </form>
+
+  </div>
+</div>

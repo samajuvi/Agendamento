@@ -1,0 +1,66 @@
+<aside class="left-panel non-printable">
+
+    <div class="logo">
+        <a href="#" class="logo-expanded">
+            <img src="../../assets/img/single-logo.png" alt="logo" class="img-logo">
+            <span class="nav-label">Gravame</span>
+        </a>
+    </div>
+    <nav class="navigation">
+        
+        <ul class="list-unstyled">
+
+        
+            <li class="has-submenu"  *ngFor="let item of modulos; let i = index;">
+                <a data-toggle="has-submenu" class="holder-menu" href="#">
+                    <i class="fa fa-home"></i>
+                    <span class="nav-label">teste</span>
+                    <span class="nav-label">{{ item.nome }}</span>
+                </a>
+                <ul class="list-unstyled">
+                    <li *ngFor="let func of item.funcionalidades; let j = index;">
+                        <a routerLinkActive="active" href='/#/{{func.rota}}'> {{func.nome}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<section class="content">
+
+    <header class="top-head container-fluid non-printable">
+        <button type="button" class="navbar-toggle pull-left">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+
+        <ul class="list-inline navbar-right top-menu top-right-menu">
+
+            <li class="dropdown text-center">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <img alt="" src="../../assets/img/avatar-placeholder.png" class="img-circle profile-img thumb-sm">
+                    <span class="username"> {{ usuario.nome }} </span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu extended pro-menu fadeInUp animated" tabindex="5003" style="overflow: hidden; outline: none;">
+
+                    <li><a (click)="logout()"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </header>
+
+    <div class="wraper container-fluid">
+        <alert></alert>
+        <router-outlet></router-outlet>
+    </div>
+
+    <footer class="footer">
+        2017 © Brasilcap - Sistema de Capitalização.
+    </footer>
+
+</section>

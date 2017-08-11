@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width:30%;">
+        {{ modulo.nome }}
+        <button type="button" (click)="exibirInputModulo()" class="modulo btn btn-xs spinner-up" style="margin-left: 10px;">
+          <i class="fa fa-pencil"></i>
+        </button>
+        <button class="btn btn-xs btn-default" style="float: right;border: 0;" (click)="excluirModulo()">
+          <i class="fa fa-trash" style="font-size: 1.5em;color: #797979;"></i>
+        </button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="middle-align">
+        <app-funcionalidade [funcionalidades]="funcionalidades" (listaAtualizada)="atualizarFuncionalidades($event)"></app-funcionalidade>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,6 @@
+body {
+    background-image: url("/assets/img/bg@2x.jpg")!important;
+    background-color: #000!important;
+    color: #fff;
+    font-family: Ubuntu;
+}

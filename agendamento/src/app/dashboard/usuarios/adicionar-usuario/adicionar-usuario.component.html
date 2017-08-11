@@ -1,0 +1,49 @@
+<div class="wraper container-fluid ng-scope" ng-controller="UserController">
+  <div class="page-title">
+    <h3 class="title ng-binding">Usuário - Dados Pessoais</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="m-b-30">
+        <a [routerLink]="['/dashboard/usuarios']"  class="btn btn-primary">
+          <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Voltar
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <app-alerttag></app-alerttag>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="nav nav-tabs profile-tabs">
+        <li class="{{ AbaDadosAtivo }}">
+          <a (click)="ativarAba('dadospessoais')" data-toggle="tab" aria-expanded="false"> 
+            <span class="visible-xs"><i class="fa fa-home"></i></span> 
+            <span class="hidden-xs">Dados Pessossais</span> 
+          </a>
+        </li>
+        <li class="{{ AbaPermissoesAtivo }}">
+          <a (click)="ativarAba('permissoes')" data-toggle="tab" aria-expanded="false"> 
+            <span class="visible-xs"><i class="fa fa-home"></i></span> 
+            <span class="hidden-xs">Permissoes</span> 
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane {{ AbaDadosAtivo }}" id="dadospessoais">
+          <div class="panel-body">
+            <app-dados-pessoais [usuario]="usuario" (dadosAtualizados)="atualizarUsuario($event)"></app-dados-pessoais>
+          </div>
+        </div>
+        <div class="tab-pane {{ AbaPermissoesAtivo }}" id="permissoes">
+          <div class="panel-body">
+            <app-aba-permissoes></app-aba-permissoes>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End row -->
+</div>

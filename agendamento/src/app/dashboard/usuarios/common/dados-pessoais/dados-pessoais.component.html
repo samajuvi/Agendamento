@@ -1,0 +1,31 @@
+<form class="form-horizontal" name="userForm">
+  
+  <div class="form-group row">
+    <label for="inputNome" class="col-md-1 control-label">Nome</label>
+    <div class="col-sm-7">
+      <input type="text" class="form-control" placeholder="Informe o nome..."
+        [(ngModel)]="usuario.nome"  required="" name="name">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputEmail" class="col-md-1 control-label">Email</label>
+    <div class="col-sm-7">
+      <input type="email" [(ngModel)]="usuario.email" class="form-control" placeholder="E-mail" name="email">
+    </div>
+
+    <label for="inputPassword" class="col-md-1 control-label">Senha</label>
+    <div class="col-sm-3">
+      <input type="password" [(ngModel)]="usuario.senha" class="form-control" placeholder="Informe a senha..." required="" name="senha">
+    </div>
+  </div>
+
+  <div class="form-group m-b-0">
+    <div class="col-sm-offset-11">
+      <button type="submit" class="btn btn-primary p-lr-30" (click)="salvarDadosBasicos()">
+        Salvar
+    </button>
+    </div>
+  </div>
+  
+</form>

@@ -1,0 +1,41 @@
+<div class="wraper container-fluid">
+  <div class="page-title">
+
+    <div [hidden]="!created" class="form-group row">
+      <div class="col-sm-4">
+        <label class="panel-title control-label">{{ plataforma.nome }}</label>
+        <button type="button" (click)="exibirInputModulo()" class="btn btn-xs spinner-up btn-purple" style="margin-left: 10px;">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+      <div class="col-sm-6" [hidden]="hideInputNomeModulo">
+        <input (keydown)="handleKeyDown($event)" name="nomeModulo" [(ngModel)]="nomeModulo" type="text" class="form-control" placeholder="Informe o nome do módulo..."
+          required>
+      </div>
+      <div class="">
+        <div class="c-f-r">
+          <button class="btn btn-primary" (click)="salvarAlteracoes()">
+              Salvar Alterações
+            </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row" [hidden]="created">
+      <div class="col-sm-2">
+        <h3>Plataforma</h3>
+      </div>
+      <div class="col-sm-7">
+        <input name="plataforma" (keydown)="handleKeyDownPlataforma($event)" [(ngModel)]="nomePlataforma" type="text" class="form-control"
+          placeholder="Informe o nome da plataforma..." required>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let modulo of plataforma.modulos; let i = index">
+      <div class="box-modulo">
+        <app-modulo [modulo]="modulo" (remover)="removerModulo($event)"></app-modulo>
+      </div>  
+    </div>
+  </div>
+</div>

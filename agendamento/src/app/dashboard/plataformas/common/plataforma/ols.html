@@ -1,0 +1,135 @@
+<div class="wraper container-fluid ng-scope" ng-controller="UserController">
+  <div class="page-title">
+    <h3 class="title ng-binding">Adicionar Plataformas</h3>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="m-b-30">
+        <a [routerLink]="['/dashboard/plataformas']"  class="btn btn-primary">
+          <i class="fa fa-arrow-left"></i> &nbsp;&nbsp; Voltar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#home" data-toggle="tab" aria-expanded="false"> 
+            <span class="visible-xs"><i class="fa fa-home"></i></span> 
+            <span class="hidden-xs">Plataforma</span> 
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+          <div class="panel-body">
+
+            <div class="form-group row" [hidden]="created">
+                <label for="inputNome" class="col-md-1 control-label">Nome</label>
+                <div class="col-sm-7">
+                  <input name="plataforma" [(ngModel)]="nomePlataforma" type="text" class="form-control" placeholder="Informe o nome da plataforma..." required>
+                </div>
+
+                <div class="col-sm-offset-8">
+                  <button (click)="adicionarPlataforma()" class="btn btn-primary p-lr-30">
+                    Adicionar
+                  </button>
+                </div>
+            </div>
+
+            <div [hidden]="!created">
+              <h4>
+                {{ plataforma.nome }} &nbsp;&nbsp;
+                <a (click)="exibirInputModulo()">
+                  <span class="controls">
+                    <i class="fa fa-plus-circle"></i>
+                  </span>
+                </a>
+              </h4>              
+            </div>
+            <div class="form-group row" [hidden]="hideInputNomeModulo">
+                <label for="inputNome" class="col-md-2 control-label">Módulo</label>
+                <div class="col-sm-7">
+                  <input name="nomeModulo" [(ngModel)]="nomeModulo" type="text" class="form-control" placeholder="Informe o nome do módulo..." required>
+                </div>
+
+                <div class="col-sm-offset-8">
+                  <button (click)="adicionarModulo()" class="btn btn-primary p-lr-30">
+                    Adicionar
+                  </button>
+                </div>
+            </div>
+              <!--
+                Lista de Módulos
+              -->
+              <ol>
+                  <div class="form-group row" [hidden]="hideInputNomeFuncionalidade">
+                      <label for="inputNome" class="col-md-2 control-label">Funcionalidade</label>
+                      <div class="col-sm-7">
+                        <input name="funcionalidade" [(ngModel)]="nomeFuncionalidade" type="text" class="form-control" placeholder="Informe o nome da funcionalidade..." required>
+                      </div>
+
+                      <div class="col-sm-offset-8">
+                        <button (click)="adicionarFuncionalidade(modulo)" class="btn btn-primary p-lr-30">
+                          Adicionar
+                        </button>
+                      </div>
+                  </div>
+                  <li *ngFor= "let modulo of plataforma.modulos; let ind = index">
+                    <div>
+                      <h4>
+                        {{ modulo.nome }} &nbsp;&nbsp;
+                        <a (click)="removerModulo(ind)">
+                          <span class="controls remove">
+                            <i class="fa fa-minus-circle"></i>
+                          </span>
+                        </a>
+                        <a (click)="exibirInputFuncionalidade(modulo)">
+                          <span class="controls">
+                            <i class="fa fa-plus-circle"></i>
+                          </span>
+                        </a>
+                      </h4>
+                    </div>
+                    <ol>
+                      <li *ngFor= "let funcionalidade of modulo.funcionalidades; let i = index">
+                        <div>
+                          <span class="col-md-2">
+                              {{ funcionalidade.nome }} 
+                          </span>
+                          
+                          <a (click)="removerFuncionalidade(modulo, funcionalidade, i)">
+                            <span class="controls remove">
+                              <i class="fa fa-minus-circle"></i>
+                            </span>
+                          </a>
+                        </div>                        
+                      </li>
+                    </ol>
+
+                  </li>
+              </ol>
+              <!--
+                Lista de Módulos
+              -->
+
+            <!-- -->
+            <div class="row" [hidden]="!created">
+              <div class="col-sm-offset-10">
+                  <button  class="btn btn-primary" (click)="salvarAlteracoes()">
+                    Salvar Alterações
+                  </button>
+              </div>              
+            </div>
+            <!-- -->  
+          </div>
+          <!-- panel-body -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End row -->
+</div>
